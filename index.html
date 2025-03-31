@@ -1,4 +1,97 @@
-Yo I'm editing this index.html file inside the main.
-Yo I am editing this index.html file.
-
-When I am done, I will save it and then run the server.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A personal portfolio website showcasing my skills and projects.">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header role="banner">
+        <h1>Welcome to My Portfolio Page</h1>
+        <button id="menu-toggle" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <nav role="navigation" id="nav-menu" class="hidden">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-me">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main">
+        <section id="about-me" role="region" aria-labelledby="about-me-heading">
+            <h2 id="about-me-heading">About Me</h2>
+            <p>Hello! I'm a web developer with a deep passion for crafting websites that are not only visually stunning but also highly functional and user-friendly. My goal is to create digital experiences that leave a lasting impression, combining creativity, technical expertise, and attention to detail. Whether it's designing responsive layouts, implementing interactive features, or optimizing performance, I love bringing ideas to life and solving problems through code. I strive to stay ahead of industry trends and continuously improve my skills to deliver solutions that meet and exceed client expectations. For me, web development is more than just coding—it's about building connections and sharing stories through innovative design and seamless functionality.</p>
+        </section>
+        <section id="projects" role="region" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">My Projects</h2>
+            <div id="project-filters">
+                <button class="filter-btn" data-category="all">All</button>
+                <button class="filter-btn" data-category="web">Web Development</button>
+                <button class="filter-btn" data-category="tools">Tools</button>
+            </div>
+            <article class="project" data-category="web" role="article" aria-labelledby="weather-app-heading">
+                <h3 id="weather-app-heading">Weather Forecast App</h3>
+                <figure>
+                    <a href="weather-app.png" class="lightbox">
+                        <img src="weather-app.png" alt="Weather Forecast App Screenshot">
+                    </a>
+                    <figcaption>A web application that provides real-time weather updates and forecasts using an API integration.</figcaption>
+                </figure>
+            </article>
+            <article class="project" data-category="web" role="article" aria-labelledby="portfolio-website-heading">
+                <h3 id="portfolio-website-heading">Portfolio Website</h3>
+                <figure>
+                    <a href="portfolio-website.png" class="lightbox">
+                        <img src="portfolio-website.png" alt="Portfolio Website Screenshot">
+                    </a>
+                    <figcaption>A personal portfolio website showcasing my skills, projects, and contact information.</figcaption>
+                </figure>
+            </article>
+            <article class="project" data-category="tools" role="article" aria-labelledby="task-manager-heading">
+                <h3 id="task-manager-heading">Task Manager Tool</h3>
+                <figure>
+                    <a href="task-manager.png" class="lightbox">
+                        <img src="task-manager.png" alt="Task Manager Tool Screenshot">
+                    </a>
+                    <figcaption>An intuitive task management application to help users organize and prioritize their daily activities efficiently.</figcaption>
+                </figure>
+            </article>
+        </section>
+        <section id="skills" role="region" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">My Skills</h2>
+            <ul>
+                <li><i class="fas fa-code"></i> HTML</li>
+                <li><i class="fab fa-css3-alt"></i> CSS</li>
+                <li><i class="fab fa-js"></i> JavaScript</li>
+                <li><i class="fab fa-react"></i> React</li>
+                <li><i class="fab fa-node-js"></i> Node.js</li>
+                <li><i class="fab fa-python"></i> Python</li>
+                <li><i class="fab fa-git-alt"></i> Git</li>
+            </ul>
+        </section>
+        <section id="contact" role="form" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Me</h2>
+            <form id="submit-form" action="https://formspree.io/f/meoalwkd" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer role="contentinfo">
+        <p>&copy; 2025 My Web Page</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
